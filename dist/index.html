@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant Brathi Portfolio Website</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://kit.fontawesome.com/bc94aa2890.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-icons@15.12.0/index.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: "Montserrat";
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* Animated gradient keyframes */
+   
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s cubic-bezier(0.4,0,0.2,1);
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Infinite hovering animation for images */
+        @keyframes floatY {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(15px);
+                transform: translateX(15px);
+            }
+        }
+        .infinite-hover {
+            animation: floatY 3s ease-in-out infinite;
+            will-change: transform;
+        }
+        /* Add to your <style> block in index.html */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeOutUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .animate-fade-out-up {
+            animation: fadeOutUp 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+
+    
+    </style>
+</head>
+<body>
+    <!-- Navbar Starts -->
+    <nav class=" bg-gray-800 shadow-md sticky w-full top-0 left-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/assets/images/Logo.png" class="h-12" alt="Logo" />
+            </a>
+            <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul id="navbar-menu" class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparentdark:border-gray-700">
+                    <li>
+                        <a href="#home" class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500  hover:scale-110 md:dark:hover:bg-transparent transition-all duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="block py-2 px-3 text-white rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  hover:scale-110 md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent transition-all duration-300">About</a>
+                    </li>
+                    
+
+                    <li>
+                        <a href="#skills" class="block py-2 px-3 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500   hover:scale-110 md:dark:hover:bg-transparent transition-all duration-300">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-blue-700 md:p-0 hover:scale-110 md:dark:hover:bg-transparent transition-all duration-300">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  hover:scale-110 md:dark:hover:bg-transparent transition-all duration-300">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="theme-toggle" class="text-white hover:scale-110 hover:text-blue-400 transition duration-300 cursor-pointer hidden">
+                <i id="theme-toggle-icon" class="fa-solid fa-moon text-xl"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <!-- Hero Section Starts -->
+    <header id="home" class="flex items-center bg-gray-950 h-max">
+        <!-- Animated Gradient Background --> <div class="absolute inset-0 animate-gradient bg-[radial-gradient(ellipse_at_2%_25%,#000000_0%,#0A2031_75%)] dark:bg-[radial-gradient(ellipse_at_2%_25%,#06375D_0%,#000000_75%)] transition-colors duration-500 z-0"></div>
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center px-4 w-full z-10">
+            <div class="flex-1 text-center md:text-left fade-in">
+                <h1 class="text-4xl md:text-5xl my-2 sm: font-extrabold text-white mb-4">Hi, I'm Nishant Brathi</h1>
+                <div>
+                    <p class="text-lg md:text-xl text-white">
+                        Web & Graphic Designer<br>
+                        <span class="text-blue-600 font-semibold">2+ years</span> Graphic Design | <span class="text-blue-600 font-semibold">5 months</span> Web & Graphic Design
+                    </p>
+                </div>
+                <div>
+                    <p class="text-md text-white  md:block hidden mb-8">
+                        A passionate Web & Graphic Designer with knowledge in building responsive and user-friendly websites & creatives using Photoshop, Illustrator, Canva, HTML, CSS, TailwindCSS JavaScript, and modern frameworks.
+                    </p>
+                </div>
+
+                <div class="flex justify-center md:justify-start space-x-4 rtl:space-x-reverse items-center">
+                    <a href="#resume" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition">See My Resume</a>
+
+                    <div class="flex space-x-4 rtl:space-x-reverse">
+                        <a href="https://www.linkedin.com/in/nishant-brathi/" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-linkedin text-white hover:text-blue-400 text-[24px] border-2 rounded-full p-3 hover:shadow-blue-400 hover:shadow-xs"></i></a>
+
+                        <a href="https://github.com/Nishant29-N" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-github text-white hover:text-blue-400 text-[24px] border-2 rounded-full p-3 hover:shadow-blue-400 hover:shadow-xs"></i></a>
+
+                        <a href="https://www.behance.net/nishantnishant94" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-square-behance text-white hover:text-blue-400 text-[24px] border-2 rounded-full p-3 hover:shadow-blue-400 hover:shadow-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 md:mt-20 flex justify-center">
+                <img src="/assets/images/hero-section.png" alt="Nishant Brathi" class="md:w-[465px] w-[377px] infinite-hover fade-in">
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section Ends -->
+   
+    <!-- About Section Start -->
+    <section id="about" class="flex items-center bg-gray-900">
+        <div class="mx-auto flex flex-col md:flex-row items-center px-4 w-full">
+            <div class="flex-1 md:mt-0 flex justify-center">
+                <img src="/assets/images/about-section.png" alt="About Nishant Brathi" class="w-[465px] infinite-hover fade-in" loading="lazy">
+            </div>
+            <div class="flex-1 text-center md:text-left fade-in">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-500 mb-4">About Me</h2>
+                <p class="text-xl text-white">
+                    Hello there! I'm Nishant, a front-end developer with a strong interest who is just getting started on the fascinating field of web development. My area of expertise is creating aesthetically beautiful and intuitive interfaces with HTML, CSS, TailwindCSS and basic JavaScript. I work hard to create websites that look amazing and give visitors a smooth experience. I have a sharp eye for design and I adore clean, efficient code.
+
+                    I'm now learning more JavaScript in order to broaden my skill set and realize the full potential of dynamic and interactive web applications. I'm excited to continue learning new technologies and keeping up with front-end development trends. I'm eager to collaborate, grow, and contribute to the ever-evolving world of web development.
+
+                    Let's build something amazing projects together!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends -->
+
+    <!-- Skills Section Starts -->
+    <section id="skills" class="bg-gray-950 py-16">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <p class="text-yellow-500 font-semibold mb-2">– My Favorite Tools –</p>
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    <span class="text-yellow-500">Exploring the Tools</span>
+                </h2>
+            </div>
+            <div class="flex flex-col items-center fade-in">
+                <div class="flex flex-wrap justify-center  my-[30px] gap-8">
+                    <!-- HTML -->
+                    <div class="flex flex-col justify-center items-center bg-gray-50  rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/HTML 3D.png" alt="HTML" class="w-14 h-14 mb-2" loading="lazy">
+
+                        <span class="text-gray-900 font-bold mt-1">HTML</span>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="flex flex-col items-center bg-gray-50  rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/CSS 3D.png" alt="CSS" class="w-14 h-14 mb-2" loading="lazy">
+
+                        <span class="text-gray-900 font-bold mt-1">CSS</span>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="flex flex-col items-center bg-gray-50 rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/JavaScript 3D.png" alt="JavaScript" class="w-14 h-14 mb-2" loading="lazy">
+
+                        <span class="text-gray-900 font-bold mt-1">JavaScript</span>
+                    </div>
+
+                    <!-- TailwindCSS -->
+                    <div class="flex flex-col items-center bg-gray-50 rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/TAILWIND 3D.png" alt="TailwindCSS" class="w-14 h-14 mb-2" loading="lazy">
+
+                        <span class="text-gray-900 font-bold mt-1">TailwindCSS</span>
+                    </div>
+
+                    <!-- Photoshop -->
+                    <div class="flex flex-col items-center bg-gray-50 rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/Photoshop 3D.png" alt="Photoshop" class="w-12 h-12 mb-2" loading="lazy">
+                        <span class="text-gray-900 font-bold mt-1">Photoshop</span>
+                    </div>
+                    <!-- Illustrator -->
+                    <div class="flex flex-col items-center bg-gray-50 rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/Illustrator 3D.png" alt="Illustrator" class="w-12 h-12 mb-2" loading="lazy">
+                        <span class="text-gray-900 font-bold mt-1">Illustrator</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center  my-[10px] gap-8">
+                    <!-- Canva -->
+                    <div class="flex flex-col justify-center items-center bg-gray-50  rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/Canva.png" alt="Canva" class="w-14 h-14 mb-2" loading="lazy">
+
+                        <span class="text-gray-900 font-bold mt-1">Canva</span>
+                    </div>
+
+                    <!-- Figma -->
+                    <div class="flex flex-col justify-center items-center bg-gray-50  rounded-3xl shadow p-6 w-32 transition-all duration-300 hover:scale-110 hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                        <img src="/assets/images/Figma 3D.png" alt="Figma" class="w-14 h-14 mb-2" loading="lazy">
+
+                        <span class="text-gray-900 font-bold mt-1">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section Ends -->
+
+    <!-- Projects Section Starts -->
+    <section id="projects" class="py-16 scroll-mt-20 bg-gray-900">
+
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <p class="text-yellow-500 font-semibold mb-2">– My Projects –</p>
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    <span class="text-yellow-500">Showcasing My Work</span>
+                </h2>
+            </div>
+        </div>
+
+      
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-7 fade-in">
+            <!-- Project 1: Large tile -->
+            <div class="md:col-span-2 bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-lg p-6 flex flex-col justify-between fade-in hover:scale-[1.02] hover:shadow-2xl transition-all duration-300">
+                <img src="/assets/images/Behance Profile.png" alt="Project 1" class="rounded-xl mb-4 w-full md:h-96 h- object-cover">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Behance Portfolio</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">A creative collection of my design work including branding, packaging, and digital projects.</p>
+                    <a href="https://www.behance.net/nishantnishant94" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out">View Project</a>
+                </div>
+            </div>
+            <!-- Project 2: Side tile -->
+            <div class="row-span-1 bg-gray-50 dark:bg-gray-800 fade-in rounded-3xl shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="/assets/images/Monosonic Music Website.png" alt="Project 2" class="rounded-xl mb-4 w-full h-80 object-cover">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Monosonic Music Website</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">MonoSonic is a dynamic music streaming app that updates song details and background images with smooth transitions and controls.</p>
+                    <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold  hover:text-blue-600 duration-200 ease-in-out">View Project</a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl fade-in shadow-lg p-4 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="/assets/images/SPIN WHEELS.png" alt="Project 3" class="rounded-xl mb-2 w-full h-48 object-cover">
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Spin Wheels Car Rental Website Design</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">SpinWheels is a project that typically involves the design and development of the visual and interactive components of the website that users will see and interact with directly.</p>
+                    <a href="https://nishant29-n.github.io/SpinWheels-Website-UI/" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out text-sm">View Project</a>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl fade-in shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="/assets/images/Weather App.png" alt="Project 4" class="rounded-xl mb-2 w-full h-48 object-cover">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Weather App</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">A web application that provides weather updates and forecasts.</p>
+                    <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out">View Project</a>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl fade-in shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="/assets/images/EMI Calculator.png" alt="Project 5" class="rounded-xl mb-2 w-full h-48 object-cover">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">EMI Calculator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">A web application that helps users calculate their Equated Monthly Installments (EMI) for loans.</p>
+                    <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center fade-in">
+            <a href="https://github.com/Nishant29-N" target="_blank">
+                <button class="my-4 mt-6 px-4 py-4 bg-blue-600 font-semibold text-white rounded-lg hover:bg-blue-700 cursor-pointer transition duration-200">View More Projects</button>
+            </a>
+        </div>
+    </div>
+    </section>
+    <!-- Projects Section Ends -->
+    
+    <!-- Academic & Professional Journey Section Start -->
+    <section id="journey" class="py-16 bg-white dark:bg-gray-950 scroll-mt-20">
+    <div class="max-w-screen-md mx-auto px-4">
+        <div class="text-center mb-10">
+        <p class="text-yellow-500 font-semibold mb-2">– Education & Work –</p>
+        <h2 class="text-3xl md:text-4xl font-bold">
+            <span class="text-yellow-500">My Academic and</span><br>
+            <span class="text-gray-900 dark:text-white">Professional Journey</span>
+        </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Education Card -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow p-6">
+            <div class="flex items-center mb-4">
+            <span class="bg-yellow-500 rounded-full px-3 py-2 mr-3">
+
+                <i class="fa-solid fa-building-columns text-white"></i>
+            </span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
+            </div>
+            <ul class="space-y-4">
+            <li>
+                <span class="block text-gray-700 dark:text-gray-200 font-semibold">2019-2023</span>
+                <span class="block text-gray-900 dark:text-white font-bold">Gateway Institute of Engineering and Technology</span>
+                <span class="block text-gray-500 dark:text-gray-400 text-sm">Bachelor of Technology in Computer Science & Engineering</span>
+            </li>
+            <li>
+                <span class="block text-gray-700 dark:text-gray-200 font-semibold">2018–2019</span>
+                <span class="block text-gray-900 dark:text-white font-bold">Sukriti World School</span>
+                <span class="block text-gray-500 dark:text-gray-400 text-sm">12th Grade Science(Non-Medical)</span>
+            </li>
+            
+            </ul>
+        </div>
+        <!-- Work Experience Card -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow p-6">
+            <div class="flex items-center mb-4">
+            <span class="bg-yellow-500 rounded-full px-3 py-2 mr-3">
+                <i class="fa-solid fa-briefcase text-white"></i>
+            </span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Work Experience</h3>
+            </div>
+            <ul class="space-y-4">
+                <li>
+                    <span class="block text-gray-700 dark:text-gray-200 font-semibold">March 2025 – July 2025</span>
+                    <span class="block text-gray-900 dark:text-white font-bold">Gorgeous Cosmos Pvt. Ltd.</span>
+                    <span class="block text-gray-500 dark:text-gray-400 text-sm">Senior Web and Graphic Designer</span>
+                </li>
+                <li>
+                    <span class="block text-gray-700 dark:text-gray-200 font-semibold">May 2023 – March 2025</span>
+                    <span class="block text-gray-900 dark:text-white font-bold">Fraterniti Foods Pvt. Ltd.</span>
+                    <span class="block text-gray-500 dark:text-gray-400 text-sm">Graphic Designer TL</span>
+            </li>
+            
+            </ul>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- Academic & Professional Journey Section End -->
+
+    <!-- Contact Information Starts -->
+
+    <footer class="footer-container flex md:flex-row flex-col flex-wrap justify-start md:justify-normal items-center bg-slate-100 dark:bg-slate-900" id="contact">
+        <div class="flex justify-center items-center flex-col w-full text-center">
+            <h1 class="text-4xl text-yellow-500 font-bold my-4 fade-in">Let's Connect</h1>
+        </div>
+            <div class="left-footer flex flex-wrap dark:text-white w-[80%] md:w-[50%] md:ml-9">
+                <div class="ml-6 md:ml-40 text-left flex flex-col flex-wrap"> 
+                    <h1 class="text-3xl font-bold my-4 fade-in">Contact Me</h1>
+                    <p class=" fade-in"><i class="fa-solid mr-3 md:mr-5 fa-paper-plane py-5 fade-in"></i>nishantn204@gmail.com</p>
+                    <p class=" fade-in"><i class="fa-solid mr-3 md:mr-5 fa-phone py-5 fade-in"></i>+91 9999393395</p>
+                    <div class="flex social-icons">
+                        
+                        <a href="https://www.linkedin.com/in/nishant-brathi/" target="_blank">
+                                <i class="fa-brands fa-linkedin fade-in cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i>
+                        </a>
+                        
+                        <a href="https://github.com/Nishant29-N" target="_blank">
+                                <i class="fa-brands fa-github fade-in cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i>
+                        </a>
+
+                        <a href="https://www.behance.net/nishantnishant94" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-square-behance fade-in text-white  cursor-pointer text-4xl mr-8 dark:text-white hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i></a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="right-footer mx-5 flex flex-wrap fade-in">
+                <form name="submit-to-google-sheet" class="flex flex-col">
+                    <label class="my-1 dark:text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Name">Name:</label>
+                    <input class="my-1 md:w-[500px] w-[300px] rounded-md py-[8px] text-left dark:bg-white" type="text" name="Name"  required>
+                    <label class="my-1 dark:text-white   font-semibold md:w-[500px] rounded-md py-1 " for="Email">Email:</label>
+                    <input class="my-1 md:w-[500px] w-[300px] rounded-md  py-[8px] text-left dark:bg-white" type="email" name="Email"  required>
+                    <label class="my-1  dark:text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Message">Message:</label>
+                    <textarea class="my-1 md:w-[500px] w-[300px] rounded-md py-1 text-left dark:bg-white" name="Message" rows="6"></textarea>
+                    <button class="cursor-pointer w-[200px] py-2 my-6 rounded-md bg-blue-600 font-semibold text-white hover:bg-blue-700" type="submit" class="btn btn2">Submit</button>
+                    <div>
+                        <span class="text-green-700 font-medium mt-3" id="msg"></span>
+                    </div>
+                </form>
+            </div>
+
+    </footer>
+    <p class="dark:text-white bg-gray-900 py-3 text-center font-medium">Copyright 2024 Nishant. All Rights Reserved.</p>
+    <!-- Contact Information Ends -->
+    
+    <!-- Contact Form Script -->
+    <script>
+        
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwZ5LAaJLkitWDbd25UFJYKFAr_GFYRYHrVVIn16tDLQnoxkCwJg2cGHOvbzKhh5Uya/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => { msg.innerHTML = "Message Sent Successfully!"
+            setTimeout(function(){
+                    msg.innerHTML = ""
+            }, 2000)
+            form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        });
+    </script>
+</body>
+</html>
