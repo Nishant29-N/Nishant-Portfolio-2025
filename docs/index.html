@@ -30,7 +30,7 @@
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 1s ease, transform 1s cubic-bezier(0.4,0,0.2,1);
+            transition: opacity 2s ease, transform 1s cubic-bezier(0.4,0,0.2,1);
         }
         .fade-in.show {
             opacity: 1;
@@ -86,7 +86,7 @@
     <nav class=" bg-gray-800 shadow-md sticky w-full top-0 left-0 z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="assets/images/Logo.png" class="h-12" alt="Logo" />
+                <img src="assets/images/Logo.png" class="md:h-12 h-7" alt="Logo" />
             </a>
             <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="flex justify-center md:justify-start space-x-4 rtl:space-x-reverse items-center">
-                    <a href="#resume" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition">See My Resume</a>
+                    <a href="resume.html" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition">See My Resume</a>
 
                     <div class="flex space-x-4 rtl:space-x-reverse">
                         <a href="https://www.linkedin.com/in/nishant-brathi/" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-linkedin text-white hover:text-blue-400 text-[24px] border-2 rounded-full p-3 hover:shadow-blue-400 hover:shadow-xs"></i></a>
@@ -268,47 +268,47 @@
         <!-- Bento Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-7 fade-in">
             <!-- Project 1: Large tile -->
-            <div class="md:col-span-2 bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-lg p-6 flex flex-col justify-between fade-in hover:scale-[1.02] hover:shadow-2xl transition-all duration-300">
-                <img src="assets/images/Behance Profile.png" alt="Project 1" class="rounded-xl mb-4 w-full md:h-96 h- object-cover">
+            <div class="md:col-span-2 bg-gray-800 rounded-3xl shadow-lg p-6 flex flex-col justify-between fade-in hover:scale-[1.02] hover:shadow-2xl transition-all duration-300">
+                <img src="assets/images/Behance Profile.png" alt="Project 1" class="rounded-xl mb-4 h-48 md:h-96 object-cover">
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Behance Portfolio</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">A creative collection of my design work including branding, packaging, and digital projects.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Behance Portfolio</h3>
+                    <p class="text-gray-300 mb-2">A creative collection of my design work including branding, packaging, and digital projects.</p>
                     <a href="https://www.behance.net/nishantnishant94" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out">View Project</a>
                 </div>
             </div>
             <!-- Project 2: Side tile -->
-            <div class="row-span-1 bg-gray-50 dark:bg-gray-800 fade-in rounded-3xl shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
-                <img src="assets/images/Monosonic Music Website.png" alt="Project 2" class="rounded-xl mb-4 w-full h-80 object-cover">
+            <div class="row-span-1 bg-gray-800 fade-in rounded-3xl shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="assets/images/Monosonic Music Website.png" alt="Project 2" class="rounded-xl mb-4 w-full md:h-80 h-48 object-cover">
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Monosonic Music Website</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">MonoSonic is a dynamic music streaming app that updates song details and background images with smooth transitions and controls.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Monosonic Music Website</h3>
+                    <p class="text-gray-300 mb-2">MonoSonic is a dynamic music streaming app that updates song details and background images with smooth transitions and controls.</p>
                     <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold  hover:text-blue-600 duration-200 ease-in-out">View Project</a>
                 </div>
             </div>
             <!-- Project 3 -->
-            <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl fade-in shadow-lg p-4 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
-                <img src="assets/images/SPIN WHEELS.png" alt="Project 3" class="rounded-xl mb-2 w-full h-48 object-cover">
+            <div class="bg-gray-800 rounded-3xl fade-in shadow-lg p-4 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="assets/images/SPIN WHEELS.png" alt="Project 3" class="rounded-xl mb-2 w-full md:h-48 h-48 object-cover">
                 <div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Spin Wheels Car Rental Website Design</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">SpinWheels is a project that typically involves the design and development of the visual and interactive components of the website that users will see and interact with directly.</p>
+                    <h3 class="text-lg font-bold text-white mb-1">Spin Wheels Car Rental Website Design</h3>
+                    <p class="text-gray-300 mb-2">SpinWheels is a project that typically involves the design and development of the visual and interactive components of the website that users will see and interact with directly.</p>
                     <a href="https://nishant29-n.github.io/SpinWheels-Website-UI/" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out text-sm">View Project</a>
                 </div>
             </div>
             <!-- Project 4 -->
-            <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl fade-in shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
-                <img src="assets/images/Weather App.png" alt="Project 4" class="rounded-xl mb-2 w-full h-48 object-cover">
+            <div class="bg-gray-800 rounded-3xl fade-in shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="assets/images/Weather App.png" alt="Project 4" class="rounded-xl mb-2 w-full md:h-48 h-48 object-cover">
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Weather App</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">A web application that provides weather updates and forecasts.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Weather App</h3>
+                    <p class="text-gray-300 mb-2">A web application that provides weather updates and forecasts.</p>
                     <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out">View Project</a>
                 </div>
             </div>
             <!-- Project 5 -->
-            <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl fade-in shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
-                <img src="assets/images/EMI Calculator.png" alt="Project 5" class="rounded-xl mb-2 w-full h-48 object-cover">
+            <div class="bg-gray-800 rounded-3xl fade-in shadow-lg p-6 flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+                <img src="assets/images/EMI Calculator.png" alt="Project 5" class="rounded-xl mb-2 h-48 w-full md:h-48 object-cover">
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">EMI Calculator</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">A web application that helps users calculate their Equated Monthly Installments (EMI) for loans.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">EMI Calculator</h3>
+                    <p class="text-gray-300 mb-2">A web application that helps users calculate their Equated Monthly Installments (EMI) for loans.</p>
                     <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 duration-200 ease-in-out">View Project</a>
                 </div>
             </div>
@@ -324,73 +324,73 @@
     <!-- Projects Section Ends -->
     
     <!-- Academic & Professional Journey Section Start -->
-    <section id="journey" class="py-16 bg-white dark:bg-gray-950 scroll-mt-20">
-    <div class="max-w-screen-md mx-auto px-4">
-        <div class="text-center mb-10">
+    <section id="journey" class="py-16 bg-gray-950 scroll-mt-20">
+    <div class="max-w-screen-md mx-auto items-center justify-center  px-4 text-center">
         <p class="text-yellow-500 font-semibold mb-2">– Education & Work –</p>
-        <h2 class="text-3xl md:text-4xl font-bold">
+        <h2 class="text-3xl md:text-4xl mb-6 font-bold">
             <span class="text-yellow-500">My Academic and</span><br>
-            <span class="text-gray-900 dark:text-white">Professional Journey</span>
+            <span class="text-white">Professional Journey</span>
         </h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Education Card -->
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow p-6">
-            <div class="flex items-center mb-4">
-            <span class="bg-yellow-500 rounded-full px-3 py-2 mr-3">
-
-                <i class="fa-solid fa-building-columns text-white"></i>
-            </span>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
+        <div class="max-w-screen-lg mx-5 md:mx-auto px-4">
+            <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
+                <!-- Education Card -->
+                <div class="bg-gray-800 rounded-2xl shadow p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-yellow-500 rounded-full px-3 py-2 mr-3">
+                            <i class="fa-solid fa-building-columns text-white"></i>
+                        </span>
+                        <h3 class="text-xl font-bold text-white">Education</h3>
+                    </div>
+                        <ul class="space-y-4">
+                        <li>
+                            <span class="block text-gray-200 font-semibold">2019-2023</span>
+                            <span class="block text-white font-bold">Gateway Institute of Engineering and Technology</span>
+                            <span class="block text-gray-400 text-sm">Bachelor of Technology in Computer Science & Engineering</span>
+                        </li>
+                        <li>
+                            <span class="block text-gray-200 font-semibold">2018–2019</span>
+                            <span class="block text-white font-bold">Sukriti World School</span>
+                            <span class="block text-gray-400 text-sm">12th Grade Science(Non-Medical)</span>
+                        </li>
+                        
+                        </ul>
+                </div>
+                <!-- Work Experience Card -->
+                <div class="bg-gray-800 rounded-2xl shadow p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-yellow-500 rounded-full px-3 py-2 mr-3">
+                            <i class="fa-solid fa-briefcase text-white"></i>
+                        </span>
+                        <h3 class="text-xl font-bold text-white">Work Experience</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li>
+                            <span class="block text-gray-200 font-semibold">March 2025 – July 2025</span>
+                            <span class="block text-white font-bold">Gorgeous Cosmos Pvt. Ltd.</span>
+                            <span class="block text-gray-400 text-sm">Senior Web and Graphic Designer</span>
+                        </li>
+                        <li>
+                            <span class="block text-gray-200 font-semibold">May 2023 – March 2025</span>
+                            <span class="block text-white font-bold">Fraterniti Foods Pvt. Ltd.</span>
+                            <span class="block text-gray-400 text-sm">Graphic Designer TL</span>
+                        </li>
+                        
+                    </ul>
+                </div>
             </div>
-            <ul class="space-y-4">
-            <li>
-                <span class="block text-gray-700 dark:text-gray-200 font-semibold">2019-2023</span>
-                <span class="block text-gray-900 dark:text-white font-bold">Gateway Institute of Engineering and Technology</span>
-                <span class="block text-gray-500 dark:text-gray-400 text-sm">Bachelor of Technology in Computer Science & Engineering</span>
-            </li>
-            <li>
-                <span class="block text-gray-700 dark:text-gray-200 font-semibold">2018–2019</span>
-                <span class="block text-gray-900 dark:text-white font-bold">Sukriti World School</span>
-                <span class="block text-gray-500 dark:text-gray-400 text-sm">12th Grade Science(Non-Medical)</span>
-            </li>
-            
-            </ul>
-        </div>
-        <!-- Work Experience Card -->
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow p-6">
-            <div class="flex items-center mb-4">
-            <span class="bg-yellow-500 rounded-full px-3 py-2 mr-3">
-                <i class="fa-solid fa-briefcase text-white"></i>
-            </span>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Work Experience</h3>
-            </div>
-            <ul class="space-y-4">
-                <li>
-                    <span class="block text-gray-700 dark:text-gray-200 font-semibold">March 2025 – July 2025</span>
-                    <span class="block text-gray-900 dark:text-white font-bold">Gorgeous Cosmos Pvt. Ltd.</span>
-                    <span class="block text-gray-500 dark:text-gray-400 text-sm">Senior Web and Graphic Designer</span>
-                </li>
-                <li>
-                    <span class="block text-gray-700 dark:text-gray-200 font-semibold">May 2023 – March 2025</span>
-                    <span class="block text-gray-900 dark:text-white font-bold">Fraterniti Foods Pvt. Ltd.</span>
-                    <span class="block text-gray-500 dark:text-gray-400 text-sm">Graphic Designer TL</span>
-            </li>
-            
-            </ul>
         </div>
         </div>
-    </div>
     </section>
     <!-- Academic & Professional Journey Section End -->
 
     <!-- Contact Information Starts -->
 
-    <footer class="footer-container flex md:flex-row flex-col flex-wrap justify-start md:justify-normal items-center bg-slate-100 dark:bg-slate-900" id="contact">
+    <footer class="footer-container flex md:flex-row flex-col flex-wrap justify-start md:justify-normal items-center bg-slate-900" id="contact">
         <div class="flex justify-center items-center flex-col w-full text-center">
             <h1 class="text-4xl text-yellow-500 font-bold my-4 fade-in">Let's Connect</h1>
         </div>
-            <div class="left-footer flex flex-wrap dark:text-white w-[80%] md:w-[50%] md:ml-9">
+            <div class="left-footer flex flex-wrap text-white w-[80%] md:w-[50%] md:ml-9">
                 <div class="ml-6 md:ml-40 text-left flex flex-col flex-wrap"> 
                     <h1 class="text-3xl font-bold my-4 fade-in">Contact Me</h1>
                     <p class=" fade-in"><i class="fa-solid mr-3 md:mr-5 fa-paper-plane py-5 fade-in"></i>nishantn204@gmail.com</p>
@@ -398,27 +398,27 @@
                     <div class="flex social-icons">
                         
                         <a href="https://www.linkedin.com/in/nishant-brathi/" target="_blank">
-                                <i class="fa-brands fa-linkedin fade-in cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i>
+                                <i class="fa-brands fa-linkedin fade-in cursor-pointer text-4xl mr-8 text-white  hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i>
                         </a>
                         
                         <a href="https://github.com/Nishant29-N" target="_blank">
-                                <i class="fa-brands fa-github fade-in cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i>
+                                <i class="fa-brands fa-github fade-in cursor-pointer text-4xl mr-8 text-white hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i>
                         </a>
 
-                        <a href="https://www.behance.net/nishantnishant94" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-square-behance fade-in text-white  cursor-pointer text-4xl mr-8 dark:text-white hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i></a>
-                        
+                        <a href="https://www.behance.net/nishantnishant94" target="_blank" class="hover:scale-110 duration-300"><i class="fa-brands fa-square-behance fade-in text-white  cursor-pointer text-4xl mr-8 hover:scale-110 duration-300 hover:text-cyan-400 my-4"></i></a>
+
                     </div>
                 </div>
                 
             </div>
             <div class="right-footer mx-5 flex flex-wrap fade-in">
                 <form name="submit-to-google-sheet" class="flex flex-col">
-                    <label class="my-1 dark:text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Name">Name:</label>
-                    <input class="my-1 md:w-[500px] w-[300px] rounded-md py-[8px] text-left dark:bg-white" type="text" name="Name"  required>
-                    <label class="my-1 dark:text-white   font-semibold md:w-[500px] rounded-md py-1 " for="Email">Email:</label>
-                    <input class="my-1 md:w-[500px] w-[300px] rounded-md  py-[8px] text-left dark:bg-white" type="email" name="Email"  required>
-                    <label class="my-1  dark:text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Message">Message:</label>
-                    <textarea class="my-1 md:w-[500px] w-[300px] rounded-md py-1 text-left dark:bg-white" name="Message" rows="6"></textarea>
+                    <label class="my-1 text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Name">Name:</label>
+                    <input class="my-1 md:w-[500px] w-[300px] rounded-md py-[8px] text-left bg-white" type="text" name="Name"  required>
+                    <label class="my-1 text-white   font-semibold md:w-[500px] rounded-md py-1 " for="Email">Email:</label>
+                    <input class="my-1 md:w-[500px] w-[300px] rounded-md  py-[8px] text-left bg-white" type="email" name="Email"  required>
+                    <label class="my-1 text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Message">Message:</label>
+                    <textarea class="my-1 md:w-[500px] w-[300px] rounded-md py-1 text-left bg-white" name="Message" rows="6"></textarea>
                     <button class="cursor-pointer w-[200px] py-2 my-6 rounded-md bg-blue-600 font-semibold text-white hover:bg-blue-700" type="submit" class="btn btn2">Submit</button>
                     <div>
                         <span class="text-green-700 font-medium mt-3" id="msg"></span>
@@ -427,7 +427,7 @@
             </div>
 
     </footer>
-    <p class="dark:text-white bg-gray-900 py-3 text-center font-medium">Copyright 2024 Nishant. All Rights Reserved.</p>
+    <p class="text-white bg-gray-900 py-3 text-center font-medium">Copyright 2024 Nishant. All Rights Reserved.</p>
     <!-- Contact Information Ends -->
     
     <!-- Contact Form Script -->
